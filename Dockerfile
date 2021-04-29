@@ -2,7 +2,7 @@
 FROM ruby:2.7.3
 
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client npm
-RUN npm install yarn
+RUN npm install -g yarn
 
 ENV APP_HOME /app
 RUN mkdir $APP_HOME

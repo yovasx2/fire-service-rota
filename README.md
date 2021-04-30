@@ -19,13 +19,13 @@ Things you may want to cover:
 * Database creation
 
   1. docker-compose up
-  1. docker-compose run --no-deps web bundle exec rails db:create
+  1. docker-compose run web bundle exec rails db:create
 
 * Database initialization
 
-  1. docker-compose run --no-deps web bundle exec rails db:migrate
-  1. docker-compose run --no-deps web bundle exec rails db:seed
+  1. docker-compose run web bundle exec rails db:migrate
+  1. docker-compose run web bundle exec rails db:seed
 
 * How to run the test suite
 
-  1. docker-compose run --no-deps web bundle exec rspec
+  1. docker-compose run web bundle exec rspec

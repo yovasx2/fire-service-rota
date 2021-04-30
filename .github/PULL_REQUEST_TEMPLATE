@@ -1,0 +1,45 @@
+<!--- Provide a general summary of your changes in the Title above -->
+
+## Description
+<!--- Describe your changes in detail -->
+
+## Motivation and Context
+<!--- Why is this change required? What problem does it solve? -->
+<!--- If it fixes an open issue, please link to the issue here. -->
+<!--- If it refers to a Favro card, please link it here. -->
+<!--- If it refers to a Zendesk ticket, please link it here. -->
+
+## Where can I try this functionality?
+<!--- Please add links to pages where this functionality can be seen. -->
+<!--- If possible use links to staging or production, but localhost is also fine
+-->
+
+## Screenshots (if appropriate):
+
+### Before this PR
+<!--- Please add a screenshot of the situation before the PR -->
+
+### After this PR
+<!--- Please add a screenshot of the situation after the PR -->
+
+## Types of changes
+<!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+
+## Checklist:
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+- [ ] I have included links to all Github, Favro and Zendesk tickets (if
+  applicable)
+- [ ] I have updated `CHANGELOG.md` accordingly.
+- [ ] I have considered the impact on the privacy of our users. I have
+      determined that these changes have no negative impact on privacy which
+      have to be discussed with customers before deploying this feature.
+      If in doubt, ask Cor or Ruben.
+- [ ] Another developer has performed a code review on this PR and approved it
+- [ ] Quality Assurance has taken place by a team member not directly involved
+      in developing this PR (invite them via the "request review" functionality.
+- [ ] I have updated the related Favro cards, and will move this to "done" after
+      merge & deploy.
+- [ ] I will notify customers/stakeholders once deployed to production

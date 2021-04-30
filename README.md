@@ -5,20 +5,27 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
 * System dependencies
 
-* Configuration
+  * Ruby 2.7.3
+
+  * Docker
+
+* Run the project
+
+  1. docker-compose up
+  1. access localhost:3000
 
 * Database creation
 
+  1. docker-compose up
+  1. docker-compose run --no-deps web bundle exec rails db:create
+
 * Database initialization
+
+  1. docker-compose run --no-deps web bundle exec rails db:migrate
+  1. docker-compose run --no-deps web bundle exec rails db:seed
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  1. docker-compose run --no-deps web bundle exec rspec

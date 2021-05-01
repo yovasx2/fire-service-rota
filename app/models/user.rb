@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validates :skills, presence: true, if: :is_firefighter?
   validates :email, uniqueness: true
 
+  has_many :schedules, as: :schedulable
 
   def is_station_manager?
     self.role == STATION_MANAGER

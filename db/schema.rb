@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_01_220118) do
+ActiveRecord::Schema.define(version: 2021_05_01_224015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "schedules", force: :cascade do |t|
+    t.string "schedulable_type"
+    t.bigint "schedulable_id"
+    t.datetime "start_at", null: false
+    t.datetime "end_at", null: false
+    t.boolean "ready", default: false, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["schedulable_type", "schedulable_id"], name: "index_schedules_on_schedulable"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"

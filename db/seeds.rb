@@ -17,4 +17,8 @@ FactoryBot.create(:firefighter, email: 'ff9@fsr.com')
 FactoryBot.create(:firefighter, email: 'ff10@fsr.com')
 
 Vehicle.destroy_all
-FactoryBot.create(:vehicle)
+FactoryBot.create(:vehicle, crew: {
+  'crew commander': 1,
+  'driver': 1,
+  'firefighter': 2
+})

@@ -1,0 +1,26 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="/">Fire Service Rota</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Schedules</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/users">Users</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Vehicles</a>
+        </li>
+      </ul>
+      <p class="navbar-text float-right">
+      <% if user_signed_in? %>
+        <strong>
+          <%= link_to current_user.email, edit_user_path(current_user), :class => 'navbar-link' %>
+        </strong> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+      <% end %>
+      </p>
+    </div>
+  </div>
+</nav>

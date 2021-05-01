@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   ROLES = [ STATION_MANAGER = 'station manager', FIREFIGHTER = 'firefighter' ].freeze
-  SKILLS = ['Crew commander', 'Driver', 'Firefighter']
+  SKILLS = ['crew commander', 'driver', 'firefighter'].freeze
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable,

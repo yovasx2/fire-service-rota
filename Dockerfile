@@ -9,7 +9,7 @@ RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
 ADD Gemfile* $APP_HOME/
-RUN bundle install -j8
+RUN bundle install -j4
 
 ADD . $APP_HOME
 

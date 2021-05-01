@@ -12,11 +12,12 @@ ADD Gemfile* $APP_HOME/
 RUN bundle install -j4
 
 ADD . $APP_HOME
+RUN npm install
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
+CMD ["entrypoint.sh"]
 EXPOSE 3000
 
 # Configure the main process to run when running the image

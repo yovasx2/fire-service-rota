@@ -13,7 +13,7 @@
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
 RSpec.describe "/users", type: :request do
-  
+
   # User. As you add validations to User, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
@@ -23,6 +23,12 @@ RSpec.describe "/users", type: :request do
   let(:invalid_attributes) {
     skip("Add a hash of attributes invalid for your model")
   }
+
+  let(:station_manager) { create(:station_manager) }
+
+  before :each do
+    sign_in station_manager
+  end
 
   describe "GET /index" do
     it "renders a successful response" do

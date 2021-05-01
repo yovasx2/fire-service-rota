@@ -2,23 +2,16 @@ require 'rails_helper'
 
 RSpec.describe "users/index", type: :view do
   before(:each) do
-    assign(:users, [
-      User.create!(
-        first_name: "First Name",
-        last_name: "Last Name",
-        email: "Email",
-        skills: ['Skills'],
-        role: "Role"
-      )
-    ])
+    @user = FactoryBot.create(:station_manager)
+    assign(:users, [@user])
   end
 
   it "renders a list of users" do
     render
-    assert_select "tr>td", text: "First Name".to_s, count: 1
-    assert_select "tr>td", text: "Last Name".to_s, count: 1
-    assert_select "tr>td", text: "Email".to_s, count: 1
-    # assert_select "tr>td", text: "Skills".to_s, count: 1
-    assert_select "tr>td", text: "Role".to_s, count: 1
+    assert_select "tr>td", text: @user.first_name.to_s, count: 1
+    assert_select "tr>td", text: @user.last_name.to_s, count: 1
+    assert_select "tr>td", text: @user.email.to_s, count: 1
+    assert_select "tr>td", text: @user.skills.to_s, count: 1
+    assert_select "tr>td", text: @user.role.to_s, count: 1
   end
 end

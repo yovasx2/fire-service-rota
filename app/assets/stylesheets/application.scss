@@ -3,5 +3,8 @@
 
 footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
-th { border-bottom: 1px solid #DDD; }
+th, td {
+  border-bottom: 1px solid #DDD;
+  padding: 0 10px;
+}
 body { margin: 0; }

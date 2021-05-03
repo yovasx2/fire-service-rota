@@ -18,4 +18,9 @@ class User < ApplicationRecord
   def is_firefighter?
     self.role == FIREFIGHTER
   end
+
+  def name
+    "#{self.first_name} #{self.last_name}"
+  end
+
 end

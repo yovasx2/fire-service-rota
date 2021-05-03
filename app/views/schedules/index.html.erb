@@ -1,0 +1,30 @@
+<h1>Availability for <%= Time.now.strftime('%F') %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firefighters</th>
+      <% (0..23).each do |i|%>
+        <th><%= "#{i}" %></th>
+      <% end %>
+    </tr>
+    <% @firefighters.each do |firefighter|%>
+      <tr>
+        <td>
+          <a href="#" data-toggle="tooltip" title="<%= firefighter.skills.sort.map(&:capitalize).join(", ") %>"><%= firefighter.name %></a>
+        </td>
+        <% @availabilities[firefighter.id].each do |availability|%>
+          <td>
+            <%= availability %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </thead>
+  </tbody>
+</table>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+  Tooltip on top
+</button>
+
+
